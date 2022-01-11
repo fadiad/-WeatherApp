@@ -1,0 +1,83 @@
+body{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#input-container{
+    display: grid;
+    grid-template-columns: 4fr 2fr ;
+    /* border-radius: 30px; */
+    font-size: medium;
+}
+
+#input-container > input{
+    padding: 10px;
+    border: 1px solid hsl(199, 82%, 40%); 
+    border-radius: 30px;
+}
+
+#input-container button{
+    background-color: 1px solid hsl(199, 82%, 40%);
+    margin-left: 1px;
+    margin-right: 1px;
+    color: hsl(199, 85%, 16%); 
+    border-radius: 30px;
+}
+
+#results{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+    #results {
+        grid-template-columns:  1fr;
+    }
+  }
+
+#results .icon {
+   justify-content: center;
+   align-content: center;
+   margin: auto;
+   color: rgb(143, 54, 54);
+}
+
+
+#results > div {
+    display: grid;
+    grid-template-columns: 3fr 20fr ;
+    border-radius: 30px;
+    max-height: fit-content;
+    background-color:hsl(199, 82%, 40%);
+    margin: 10px;
+    color: aliceblue;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+} 
+
+#results > div > p {
+    border-radius: 30px;
+}
+
+#results .weather{
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+}
+
+#results .weather img{
+    margin: auto;
+}
+
+#results > p {
+    display: none; 
+    color: red;
+    /* border-radius: 30px; */
+}
+
+.a{
+    background-color: red;
+    width: 20px;
+}

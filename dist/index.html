@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose Expenses Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="input-container">
+        <input type="text" placeholder="City name">
+        <button id="search-btn">Search <i class="fab fa-android"></i> </button>
+    </div>
+
+    <div id="errors">
+    </div>
+
+    <div id="results">
+    </div>
+
+    <script id="cities-template" type="text/x-handlebars">
+        {{#each players}}
+        <div class = "city">
+            <div class = "icon">
+                <i class="fas  {{#if saved}} fa-minus-circle {{else}} fa-plus {{/if}}"></i>
+            </div>
+            <div class= "weather">
+                <h2>{{name}}</h2>
+                <h2>{{temperature}} °</h2> 
+                <h2>{{condition}}</h2>
+                <img src="{{conditionPic}}" alt="">
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="Model.js"></script>
+    <script src="View.js"></script>
+    <script src="Controller.js"></script>
+</body>
+
+</html>
